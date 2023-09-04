@@ -1,11 +1,11 @@
 export default class Character {
-  constructor(name, type, attack, defence, health = 100, level = 1) {
+  constructor(name, type) {
     this.name = name;
     this.type = type;
-    this.attack = attack;
-    this.defence = defence;
-    this.health = health;
-    this.level = level;
+    this.health = 100;
+    this.level = 1;
+    this.attack = undefined;
+    this.defence = undefined;
 
     if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('Некорректное значение имени персонажа');
